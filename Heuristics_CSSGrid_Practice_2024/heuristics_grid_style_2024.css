@@ -1,0 +1,140 @@
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+		.grid-col-span-2{
+			grid-column: span 2;
+			}	
+		
+		.grid-col-span-3{
+			grid-column: span 3;
+		}
+		
+		.heuristic-grid {
+            display: grid;
+/*            grid-template-columns: repeat(3, minmax(250px, 1fr));  Adjust the minmax values to control column width */
+            gap: 20px;
+        }
+
+        .heuristic {
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .heuristic:nth-child(1) {
+            background-color: #3498db; /* Blue */
+        }
+
+        .heuristic:nth-child(2) {
+            background-color: #e74c3c; /* Red */
+        }
+
+        .heuristic:nth-child(3) {
+            background-color: #27ae60; /* Green */
+			grid-column-start: 3;
+			grid-row-start: 1;
+			grid-row-end: 3;
+        }
+
+        .heuristic:nth-child(4) {
+            background-color: #f39c12; /* Yellow */
+        }
+
+        .heuristic:nth-child(5) {
+            background-color: #9b59b6; /* Purple */
+			grid-column-start: 3;
+			grid-row-start: 5;
+        }
+
+        .heuristic:nth-child(6) {
+            background-color: #34495e; /* Dark Blue */
+        }
+
+        .heuristic:nth-child(7) {
+            background-color: #e67e22; /* Orange */
+        }
+
+        .heuristic:nth-child(8) {
+            background-color: #16a085; /* Teal */
+/*			grid-column-start: 1;*/
+/*			grid-column-end: 3;*/
+			grid-row-start: 5;
+			grid-row-end: 8;
+        }
+
+        .heuristic:nth-child(9) {
+            background-color: #d35400; /* Dark Orange */
+        }
+
+        .heuristic:nth-child(10) {
+            background-color: #c0392b; /* Dark Red */
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+		
+		@media (max-width: 768px) {
+            .heuristic-grid {
+                grid-template-columns: 1fr; /* Make the grid one column wide for smaller screens */
+            }
+
+            /* Reset the grid column positioning for all divs to the default values */
+            .heuristic:nth-child(3),
+            .heuristic:nth-child(5),
+            .heuristic:nth-child(8) {
+                grid-column-start: auto;
+                grid-row-start: auto;
+                grid-row-end: auto;
+            }
+        }
+/*				grid-template-columns: repeat(3, 1fr);  Adjust the minmax values for smaller screens */
+/*				grid-template-columns: repeat(3, minmax(250px, 1fr));  Adjust the minmax values for smaller screens */
+/*
+			}
+		}
+/*		@media (max-width: 768px) {*/
+/*		@media (min-width: 30em) {*/
+/*			.heuristic-grid {*/
+/*				grid-template-columns: repeat(3, 1fr);  Adjust the minmax values for smaller screens */
+/*				grid-template-columns: repeat(3, minmax(250px, 1fr));  Adjust the minmax values for smaller screens */
+/*
+			}
+
+			.heuristic:nth-child(3) {
+				grid-column-start: auto;
+				grid-row-start: auto;
+				grid-row-end: auto;
+			}
+*/
+
+/*
+			.heuristic:nth-child(5) {
+				grid-column-start: auto;
+				grid-row-start: auto;
+			}
+
+			.heuristic:nth-child(8) {
+				grid-row-start: auto;
+				grid-row-end: auto;
+			}
+			
+			.grid-col-span-2{
+			grid-column: span 2;
+			}	
+		
+			.grid-col-span-3{
+				grid-column: span 3;
+			}
+		
+		}
+*/
